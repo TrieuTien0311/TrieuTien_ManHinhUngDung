@@ -117,33 +117,32 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnFb"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#452F2F"
-        android:drawableLeft="@drawable/ic_facebook"
-        android:text="Facebook"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnGg"
-        app:layout_constraintTop_toTopOf="@+id/btnGg"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/btnGg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#452F2F"
         android:drawableLeft="@drawable/ic_google"
         android:text="Google"
         android:textAlignment="viewStart"
-        app:layout_constraintEnd_toStartOf="@+id/btnFb"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="496dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btnFb"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnFb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#452F2F"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:text="Facebook"
+        app:layout_constraintStart_toEndOf="@id/btnGg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
