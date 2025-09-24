@@ -2,38 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/bk"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp">
 
-    <!-- Ô nhập tên đăng nhập -->
-    <EditText
-        android:id="@+id/edtUsername"
-        android:hint="Tên đăng nhập"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <!-- Ô nhập mật khẩu -->
-    <EditText
-        android:id="@+id/edtPassword"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <!-- Nút đăng nhập -->
-    <Button
-        android:id="@+id/btnLogin"
-        android:text="Đăng nhập"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <!-- Text chuyển sang màn hình đăng ký -->
     <TextView
-        android:id="@+id/tvGoToRegister"
-        android:text="Chưa có tài khoản? Đăng ký"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="16dp"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="59dp"
+        android:rotation="0"
+        android:rotationX="0"
+        android:text="LOGIN"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 </LinearLayout>
