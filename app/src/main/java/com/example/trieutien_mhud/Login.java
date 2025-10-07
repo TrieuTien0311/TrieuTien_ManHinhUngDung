@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,13 +42,26 @@ public class Login extends AppCompatActivity {
 
         // --- Bắt sự kiện nhấn nút "SIGN IN" ---
         Button btnLogin = findViewById(R.id.btnlogin);
+        final EditText inputUsername = findViewById(R.id.inputUsername);
+        final EditText inputPassword = findViewById(R.id.idPassword);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Khi nhấn SIGN IN, chuyển sang màn hình Profile
-                Intent intent = new Intent(Login.this, Profile.class);
-                startActivity(intent);
-                finish(); // Đóng Login để không quay lại khi nhấn Back
+                // Lấy giá trị từ EditText
+                String username = inputUsername.getText().toString().trim();
+                String password = inputPassword.getText().toString().trim();
+
+                // Kiểm tra username và password
+                if (username.equals("TrieuTien123") && password.equals("03112005")) {
+                    // Đúng thông tin, chuyển sang màn hình Profile
+                    Intent intent = new Intent(Login.this, Profile.class);
+                    startActivity(intent);
+                    finish(); // Đóng Login để không quay lại khi nhấn Back
+                } else {
+                    // Sai thông tin, hiển thị thông báo lỗi
+                    Toast.makeText(Login.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
